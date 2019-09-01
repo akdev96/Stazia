@@ -10,7 +10,7 @@ Service Station Management System
 <a href="https://github.com/spegusess/stazia/releases"><img src="https://img.shields.io/badge/version-1.0.0-blue"></a>
 <a href="https://github.com/spegusess/stazia/commits/master"><img src="https://img.shields.io/badge/build-passing-brightgreen.svg"></a>
 <a href="https://github.com/spegusess/stazia"><img src="https://img.shields.io/badge/framework-codeigniter-orange.svg"></a>
-<a href="https://github.com/spegusess/stazia/LICENSE"><img src="https://img.shields.io/github/license/spegusess/stazia.svg"></a>
+<a href="https://github.com/spegusess/stazia/blob/master/LICENSE"><img src="https://img.shields.io/github/license/spegusess/stazia.svg"></a>
 <a href="https://github.com/spegusess/stazia/network/members"><img src="https://img.shields.io/github/forks/spegusess/stazia.svg"></a>
 </p>
 
@@ -20,6 +20,7 @@ Service Station Management System
 **Stazia** is a service station management system created using CodeIgniter php framework that supports various sub systems such as
 - [x] Appointment management
 - [x] Client management
+- [x] Operation management
 - [ ] Payrole management
 - [ ] Finance management
 - [ ] Stock management
@@ -34,17 +35,19 @@ Service Station Management System
 - Bootstrap
 - CodeIgniter
 
-## Setup Database
+## Setup Environment
+** Database **
 - Goto Database Management Console (Adminer, phpmyadmin or mysql console)
 - Create a user with admin priviledges
 - Create a database <your_database>
 - Give all Priviledge to the database
 - Import stazia_db.sql file into <your_database>
 
-## Setup Environment
+** Project Configurations **
 - Edit CodeIgniter Config file located in '''/application/config/config.php'''
 ''' base_url = "localhost/<folder_name_inside_htdocs>" '''
 
 - Edit CodeIgniter database config file located in '''/application/config/database.php'''
 
-## Installation
+## Deployment
+
