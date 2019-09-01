@@ -36,18 +36,12 @@ Service Station Management System
 - CodeIgniter
 
 ## Setup Environment
-** Database **
+**Database**
 - Goto Database Management Console (Adminer, phpmyadmin or mysql console)
 - Create a user with admin priviledges
 - Create a database <your_database>
 - Give all Priviledge to the database
 - Import stazia_db.sql file into <your_database>
 
-** Project Configurations **
-- Edit CodeIgniter Config file located in '''/application/config/config.php'''
-''' base_url = "localhost/<folder_name_inside_htdocs>" '''
-
-- Edit CodeIgniter database config file located in '''/application/config/database.php'''
-
-## Deployment
+**Project Configurations**
 
