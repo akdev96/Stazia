@@ -8,7 +8,7 @@ Service Station Management System
 
 <p align="center">
 <a href="https://github.com/spegusess/stazia/releases"><img src="https://img.shields.io/badge/version-1.0.0-blue"></a>
-<a href="https://github.com/spegusess/stazia/commits/master"><img src="https://img.shields.io/badge/build-passing-brightgreen.svg"></a>
+[![Build Status](https://travis-ci.org/spegusess/Stazia.svg?branch=master)](https://travis-ci.org/spegusess/Stazia)
 <a href="https://github.com/spegusess/stazia"><img src="https://img.shields.io/badge/framework-codeigniter-orange.svg"></a>
 <a href="https://github.com/spegusess/stazia"><img src="https://img.shields.io/badge/license-GNUv3.0-blue.svg"></a>
 <a href="https://github.com/spegusess/stazia/network/members"><img src="https://img.shields.io/github/forks/spegusess/stazia.svg"></a>
