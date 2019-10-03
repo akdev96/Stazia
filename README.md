@@ -15,6 +15,8 @@ Service Station Management System
 <a href="https://github.com/spegusess/stazia/network/members"><img src="https://img.shields.io/github/forks/spegusess/stazia.svg"></a>
 </p>
 
+## Testing
+- Automated Testing Support Hack for travis (https://github.com/fmalk/codeigniter-phpunit)
 
 ## About Stazia
 
