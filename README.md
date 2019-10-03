@@ -18,7 +18,7 @@ Service Station Management System
 
 ## About Stazia
 
-**Stazia** is a service station management system created using CodeIgniter php framework that supports various sub systems such as
+**Stazia** is a service station management system created using CodeIgniter php framework that supports various sub systems including
 - [x] Appointment management
 - [x] Client management
 - [x] Operation management
@@ -46,3 +46,4 @@ Service Station Management System
 
 **Project Configurations**
 
+- 
