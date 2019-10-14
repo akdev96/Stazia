@@ -1,30 +1,47 @@
 language: php
+
 php:
-  - 5.6
-  - 7.0
   - 7.2
   - 7.3
-  - hhvm
+  - nightly
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - php: nightly
+
+global:
+  - CI=true
+  - CI_ENVIRONMENT=testing
+
+# Recommended by Travis support
+sudo: required
+dist: trusty
+group: edge
 
 env:
-  - CI_VERSION=3.1.10
+  - DB=mysqli
+  - DB=postgres
+  - DB=sqlite
 
-# install vanilla CI before anything
-before_install:
-  - wget https://github.com/bcit-ci/CodeIgniter/archive/$CI_VERSION.tar.gz -O - | tar xz
-  - cp -r application/* CodeIgniter-$CI_VERSION/application/
-  - cp -r system/* CodeIgniter-$CI_VERSION/system/
+services:
+  - memcached
+  - mysql
+  - postgresql
+  - redis-server
 
-# install this project on top of it
-install:
-  - cp -r CodeIgniter-$CI_VERSION/system/* system/
-  - cp -r CodeIgniter-$CI_VERSION/application/* application/
-  - mv CodeIgniter-$CI_VERSION/index.php index.php
-  - rm -rf CodeIgniter-$CI_VERSION
-
-# run multiple test commands
 script:
-  - phpunit                  #default test command
-  - phpunit -c phpunit.xml   #custom test command to make sure CLI args don't break the test
+  - php vendor/bin/phpunit -v
 
+before_install:
+  - mysql -e "CREATE DATABASE IF NOT EXISTS test;" -uroot;
+  - mysql -e "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = 'test';" -uroot
+  - psql -c 'CREATE DATABASE test;' -U postgres
 
+before_script:
+  - echo 'extension = memcached.so' >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - echo 'extension = redis.so' >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - composer install --prefer-source
+
+#after_success:
+  #- travis_retry php tests/bin/php-coveralls.phar -v
