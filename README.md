@@ -16,7 +16,8 @@ Service Station Management System
 </p>
 
 ## Testing
-- Automated Testing Support Hack for travis (https://github.com/fmalk/codeigniter-phpunit)
+- Automated Testing Support Hack for travis ( https://github.com/fmalk/codeigniter-phpunit )
+- Refined Dev Project of CarPal ( https://github.com/spegusess/CarPal )
 
 ## About Stazia
 
